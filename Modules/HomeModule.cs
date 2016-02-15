@@ -1,5 +1,5 @@
 using Nancy;
-using TEMPLATE.Objects;
+using PingPong.Objects;
 using System.Collections.Generic;
 
 namespace Project
@@ -11,8 +11,10 @@ namespace Project
       Get["/"] = _ => View ["index.cshtml"];
       //loads index view at root//
 
-      Get["/other_page"] = _ => {
-      return View["template.cshtml"];
+      Post["/results"] = _ => {
+      var newPingPong = new PingPongGenerator(Request.Form["userNumber"]);
+      newPingPong.LoadNumber();
+      return View["results.cshtml", newPingPong];
       };
     }
   }

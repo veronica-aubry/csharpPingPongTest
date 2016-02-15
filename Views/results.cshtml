@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ping-Pong</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <ul>
+
+      @foreach (var number in Model._results)
+        {
+        <li> @number
+        </li>
+      }
+    </ul>
+
+  <a href="/">Go Again!</a>
+  </body>
+</html>

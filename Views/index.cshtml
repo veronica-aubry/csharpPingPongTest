@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello Friend!</title>
+    <title>Ping-Pong</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
   </head>
   <body>
-    <h1>THIS IS A TEMPLATE</h1>
+    <form method="POST" action="/results">
+      <label for="userNumber">Enter Number to Test PingPong</label>
+      <input type="text" name="userNumber" autofocus>
+      <input type="Submit" name="submit" value="Run PingPong Test">
+    </form>
   </body>
 </html>
