@@ -1,0 +1,17 @@
+Specs:										Implimented		Tested-Pass
+
+	Buisness Logic:
+	input evenly divisible by 3 returns ping				*			*	
+	input evenly divisible by 5 returns pong				*			*
+	input evenly divisible by 15 returns ping-pong				*			*
+	Each number up to limit tested for ping,ping, ping-pong			*			*
+	input not evenly divisible by 3 or 5 or 3&5, returns tested number	*			*
+	appropriate return result stored in array				*			*
+	at end of testing array sent to interface				*			*
+
+	Interface / Logic Bridge:
+	Web page displays form for user to enter number to test up to		*			*
+	User enters upper limit test case number in form			*			*
+	Form sends data to Buisness Logic via post request			*			*	
+	restults array parsed in nacy/razor module				*			*
+	array of results displayed on chsthml					*			*

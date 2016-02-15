@@ -11,23 +11,22 @@ namespace PingPong.Objects
     {
       private string _input;
       private int _inputIntConverted;
-      public List<string> _results = new List<string> {};
+      private List<string> _results;
 
 
     public PingPongGenerator(string userInput) {
       _input = userInput;
+       _results = new List<string>{};
       _results.Clear();
+    }
+
+    public List<string> GetNumbers () {
+      return _results;
     }
 
     public void LoadNumber() {
       PingPongMethod(this._input);
     }
-
-    // public int GetInt()
-    //  {
-    // _inputIntConverted = int.Parse(_input);
-    //  return _inputIntConverted;
-    //  }
 
     public List<string> PingPongMethod(string input) {
       int newInput  = int.Parse(input);
@@ -46,7 +45,7 @@ namespace PingPong.Objects
           _results.Add(i.ToString());
         }
       }
-      return _results;
+      return this.GetNumbers();
     }
   }
 }
